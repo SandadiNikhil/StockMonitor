@@ -1,0 +1,35 @@
+# Ignore the .idea folder (IDE settings)
+.idea/
+
+# Ignore virtual environments
+.venv/
+venv/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore logs and temporary files
+logs/
+*.log
+*.tmp
+
+# Ignore compiled Python files
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Ignore Jupyter Notebook checkpoints (if using Jupyter)
+.ipynb_checkpoints/
+
+# Ignore OS-specific files
+.DS_Store  # macOS
+Thumbs.db  # Windows
+
+# Ignore environment variables and credentials
+.env
+*.env
