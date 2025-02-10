@@ -92,3 +92,4 @@ def score_earnings_growth_rate(growth_rate):
         return 5
     else:
         return 1
+# --- End of Scoring Functions ---
