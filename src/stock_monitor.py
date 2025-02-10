@@ -1,4 +1,9 @@
-# import requests
+"""
+    Previous version of the stock monitor.
+    This version is not used in the current implementation.
+"""
+
+# # import requests
 # import pandas as pd
 # import matplotlib.pyplot as plt
 # import numpy as np
@@ -37,8 +42,8 @@
 #     historical_prices['200_EMA'] = EMA(historical_prices['close'], timeperiod=200)
 #     historical_prices['RSI'] = RSI(historical_prices['close'], timeperiod=14)
 #     historical_prices['OBV'] = OBV(historical_prices['close'], historical_prices['volume'])
-#     historical_prices['VWAP'] = VWAP(historical_prices['high'], historical_prices['low'], 
-#                                      historical_prices['close'], historical_prices['volume'])
+#     historical_prices['VWAP'] = VWAP(historical_prices['high'], historical_prices['low'],
+# historical_prices['close'], historical_prices['volume'])
 
 #     # --- Analyze historical data (last 5 years, 4 quarters) ---
 #     # ... (Extract and analyze data for different timeframes)
@@ -87,15 +92,15 @@
 #     """
 #     Filter stocks into buy/sell signals based on their scores.
 #     """
-#     buy_signals = {symbol: score for symbol, score in stock_scores.items() 
+#     buy_signals = {symbol: score for symbol, score in stock_scores.items()
 #                   if score >= buy_threshold}
-#     sell_signals = {symbol: score for symbol, score in stock_scores.items() 
+#     sell_signals = {symbol: score for symbol, score in stock_scores.items()
 #                    if score <= sell_threshold}
-    
+
 #     # Sort by score
 #     buy_signals = dict(sorted(buy_signals.items(), key=lambda x: x[1], reverse=True))
 #     sell_signals = dict(sorted(sell_signals.items(), key=lambda x: x[1]))
-    
+
 #     return buy_signals, sell_signals
 
 # # --- Step 5: Display the results ---
@@ -107,7 +112,7 @@
 #     print("\nBUY SIGNALS:")
 #     for symbol, score in buy_signals.items():
 #         print(f"{symbol}: {score:.2f}")
-        
+
 #     print("\nSELL SIGNALS:")
 #     for symbol, score in sell_signals.items():
 #         print(f"{symbol}: {score:.2f}")

@@ -5,7 +5,7 @@ This module contains functions to fetch stock data from the FMP API,
 including real-time prices and historical data.
 It handles API authentication using environment variables.
 """
-from requests.exceptions import HTTPError 
+from requests.exceptions import HTTPError
 import requests
 from config import get_api_key, get_base_url
 
@@ -15,7 +15,7 @@ def fetch_fmp_data(endpoint):
     API_KEY = get_api_key()  # Get API key using config function
     BASE_URL = get_base_url()  # Get base URL using config function
     url = f"{BASE_URL}/{endpoint}?apikey={API_KEY}"
-    
+
     try:
         response = requests.get(url)
         response.raise_for_status()  # Raise an exception for bad status codes
@@ -37,10 +37,13 @@ def get_company_profile(symbol):
     endpoint = f"company/profile/{symbol}"  # API endpoint for company profile
     profile_data = fetch_fmp_data(endpoint)
     # print(f"DEBUG - profile_data for symbol {symbol}: {profile_data}")
-    if profile_data and isinstance(profile_data, dict) and 'profile' in profile_data and isinstance(profile_data['profile'], dict) and 'companyName' in profile_data['profile']:
+    if profile_data and isinstance(
+            profile_data,
+            dict) and 'profile' in profile_data and isinstance(
+            profile_data['profile'],
+            dict) and 'companyName' in profile_data['profile']:
         return profile_data['profile']['companyName']
     return None
-
 
 
 def get_company_key_ratios(symbol):
@@ -48,12 +51,15 @@ def get_company_key_ratios(symbol):
     Fetches key financial ratios for a given stock symbol from Financial Modeling Prep API.
     Returns the JSON response containing key ratios, or None if data cannot be fetched.
     """
-    endpoint = f"ratios/{symbol}" # API endpoint for financial ratios
-    ratios_data = fetch_fmp_data(endpoint) # Fetch ratios data
-    # print(f"DEBUG - ratios_data for symbol {symbol}: {ratios_data}") # Debug print
-    if ratios_data and isinstance(ratios_data, list): # Check if data is a valid list and not empty
-        return ratios_data # Return the ratios data as JSON
-    return None # Return None if ratios data cannot be retrieved
+    endpoint = f"ratios/{symbol}"  # API endpoint for financial ratios
+    ratios_data = fetch_fmp_data(endpoint)  # Fetch ratios data
+    # print(f"DEBUG - ratios_data for symbol {symbol}: {ratios_data}") # Debug
+    # print
+    if ratios_data and isinstance(
+            ratios_data,
+            list):  # Check if data is a valid list and not empty
+        return ratios_data  # Return the ratios data as JSON
+    return None  # Return None if ratios data cannot be retrieved
 
 
 def get_realtime_price(symbol):
@@ -62,11 +68,14 @@ def get_realtime_price(symbol):
     Returns the JSON response containing real-time price, or None if data cannot be fetched.
     """
     endpoint = f"quote/{symbol}"  # API endpoint for real-time quote
-    price_data = fetch_fmp_data(endpoint) # Fetch price data
-    # print(f"DEBUG - realtime_price_data for symbol {symbol}: {price_data}") # Debug print
-    if price_data and isinstance(price_data, list) and len(price_data) > 0: # Check if data is valid list and not empty
-        return price_data[0] # Return the first element of the list, which contains the quote
-    return None # Return None if real-time price data cannot be retrieved
+    price_data = fetch_fmp_data(endpoint)  # Fetch price data
+    # print(f"DEBUG - realtime_price_data for symbol {symbol}: {price_data}")
+    # # Debug print
+    if price_data and isinstance(price_data, list) and len(
+            price_data) > 0:  # Check if data is valid list and not empty
+        # Return the first element of the list, which contains the quote
+        return price_data[0]
+    return None  # Return None if real-time price data cannot be retrieved
 
 
 def get_historical_price(symbol):
@@ -101,7 +110,7 @@ def get_historical_price(symbol):
 
 #                 if earnings_growth_rate is not None:
 #                     return earnings_growth_rate  # Return the growth rate if found
-#         return None  # Return None if earnings growth rate cannot be retrieved
+# return None  # Return None if earnings growth rate cannot be retrieved
 
 #     except HTTPError as e: # Catch HTTP errors specifically
 #         if e.response.status_code == 403: # Check for 403 Forbidden specifically
@@ -131,6 +140,7 @@ def get_earnings_growth_rate(symbol):
                 return earnings_growth_rate
     return None
 
+
 def main():
     """
     This fmp_api.py module's main function is for testing API function calls.
@@ -139,16 +149,15 @@ def main():
     print("fmp_api.py: This module is for fetching data from the FMP API.")
     print("It is used by stock.py to get financial data.")
     print("This main function is for testing API calls and is not needed for normal operation.")
-    
+
     # Example usage (for testing):
-    api_key_check = get_api_key # Accessing the API key to trigger loading/check
+    api_key_check = get_api_key  # Accessing the API key to trigger loading/check
     if api_key_check:
         print("API_KEY loaded successfully from environment variables.")
     else:
         print("Error: API_KEY not found in environment variables. Please set it!")
 
-    symbol_to_check = "AAPL" # Example symbol for testing
-
+    symbol_to_check = "AAPL"  # Example symbol for testing
 
     profile = get_company_profile(symbol_to_check)
     if profile:
@@ -156,29 +165,28 @@ def main():
     else:
         print(f"\nCould not retrieve company profile for {symbol_to_check}")
 
-
-    realtime_price = get_realtime_price(symbol_to_check) # Test real-time price function
+    realtime_price = get_realtime_price(
+        symbol_to_check)  # Test real-time price function
     if realtime_price:
         print(f"\nReal-time Price for {symbol_to_check}: {realtime_price}")
     else:
         print(f"\nCould not retrieve real-time price for {symbol_to_check}")
 
-
-    historical = get_historical_price(symbol_to_check) # Test historical price function
+    # Test historical price function
+    historical = get_historical_price(symbol_to_check)
     if historical:
         print(f"\nHistorical Data for {symbol_to_check}: (first 2 records)")
-        print(historical[:2]) # Print first 2 records for brevity
+        print(historical[:2])  # Print first 2 records for brevity
     else:
         print(f"\nCould not retrieve historical data for {symbol_to_check}")
 
-
-    key_ratios = get_company_key_ratios(symbol_to_check) # Test key ratios function
+    key_ratios = get_company_key_ratios(
+        symbol_to_check)  # Test key ratios function
     if key_ratios:
         print(f"\nKey Ratios for {symbol_to_check}: (first record)")
-        print(key_ratios[0]) # Print first record for brevity
+        print(key_ratios[0])  # Print first record for brevity
     else:
         print(f"\nCould not retrieve key ratios for {symbol_to_check}")
-
 
     earnings_growth = get_earnings_growth_rate(
         symbol_to_check)  # Test earnings growth function

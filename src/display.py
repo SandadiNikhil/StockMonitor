@@ -1,4 +1,6 @@
-import formula  # Import formula for weights (if needed for display formatting, e.g., weights in titles)
+# Import formula for weights (if needed for display formatting, e.g.,
+# weights in titles)
+import formula
 
 def display_stock_data(data):
     """
@@ -12,11 +14,11 @@ def display_stock_data(data):
     key_ratios = data.get("key_ratios")
     ratio_scores = data.get("ratio_scores")
     weighted_scores = data.get("weighted_scores")
-    total_fundamental_score_5yr_weight = data.get("total_fundamental_score_5yr_weight")
+    total_fundamental_score_5yr_weight = data.get(
+        "total_fundamental_score_5yr_weight")
     earnings_growth_data = data.get("earnings_growth_data")
     earnings_growth_score = data.get("earnings_growth_score")
     weighted_earnings_growth_score = data.get("weighted_earnings_growth_score")
-
 
     if company_name:
         print(f"Company Name: {company_name} ({symbol.upper()})")
@@ -36,7 +38,9 @@ def display_stock_data(data):
             print(data_point)
         print(f"... (Total {len(historical_data)} historical data points) ...")
     else:
-        print("\nCould not retrieve historical price data for {}.".format(symbol.upper()))
+        print(
+            "\nCould not retrieve historical price data for {}.".format(
+                symbol.upper()))
 
     if key_ratios and len(key_ratios) > 0:
         key_ratios_data = key_ratios[0]  # Latest fiscal year ratios
@@ -54,26 +58,39 @@ def display_stock_data(data):
             print(f"  ROE Score: {ratio_scores.get('roe_score')}")
 
         if weighted_scores:
-            print(f"\nWeighted Fundamental Scores (using 5-Year Weights from {formula.__name__}.py):") # Show formula module name for clarity
-            print(f"  Weighted P/E Ratio Score: {weighted_scores.get('weighted_pe_score'):.2f}")
-            print(f"  Weighted P/B Ratio Score: {weighted_scores.get('weighted_pb_score'):.2f}")
-            print(f"  Weighted D/E Ratio Score: {weighted_scores.get('weighted_de_score'):.2f}")
-            print(f"  Weighted ROE Score: {weighted_scores.get('weighted_roe_score'):.2f}")
+            # Show formula module name for clarity
+            print(
+                f"\nWeighted Fundamental Scores (using 5-Year Weights from {formula.__name__}.py):")
+            print(
+                f"  Weighted P/E Ratio Score: {weighted_scores.get('weighted_pe_score'):.2f}")
+            print(
+                f"  Weighted P/B Ratio Score: {weighted_scores.get('weighted_pb_score'):.2f}")
+            print(
+                f"  Weighted D/E Ratio Score: {weighted_scores.get('weighted_de_score'):.2f}")
+            print(
+                f"  Weighted ROE Score: {
+                    weighted_scores.get('weighted_roe_score'):.2f}")
 
-        if total_fundamental_score_5yr_weight is not None: # Check if score is calculated before displaying
-            print(f"\nTotal Fundamental Score (5-Year Weighting, out of 100): {total_fundamental_score_5yr_weight:.2f}")
+        if total_fundamental_score_5yr_weight is not None:  # Check if score is calculated before displaying
+            print(
+                f"\nTotal Fundamental Score (5-Year Weighting, out of 100): {
+                    total_fundamental_score_5yr_weight:.2f}")
     else:
         print("\nCould not retrieve key ratios for {}.".format(symbol.upper()))
 
     # --- Earnings Growth Rate Section ---
     if earnings_growth_data:
-        print("\nEarnings Growth Rate Data (PLACEHOLDER - NOT YET IMPLEMENTED API FUNCTION):") # Still placeholder message
+        # Still placeholder message
+        print(
+            "\nEarnings Growth Rate Data (PLACEHOLDER - NOT YET IMPLEMENTED API FUNCTION):")
         print(earnings_growth_data)
 
-        if earnings_growth_score is not None: # Check if score is calculated before displaying
+        if earnings_growth_score is not None:  # Check if score is calculated before displaying
             print("\nEarnings Growth Rate Score (PLACEHOLDER - NOT YET IMPLEMENTED):")
             print(f"  Earnings Growth Rate Score: {earnings_growth_score}")
-            print(f"  Weighted Earnings Growth Rate Score: {weighted_earnings_growth_score:.2f}")
+            print(
+                f"  Weighted Earnings Growth Rate Score: {
+                    weighted_earnings_growth_score:.2f}")
     else:
         print("\nCould not retrieve Earnings Growth Rate data (PLACEHOLDER - API function not yet implemented).".format(symbol.upper()))
 
@@ -90,4 +107,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main() # Optional: Main function for display module testing
+    main()  # Optional: Main function for display module testing
