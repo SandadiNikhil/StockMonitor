@@ -28,8 +28,9 @@ build/
 
 # Ignore OS-specific files
 .DS_Store  # macOS
-Thumbs.db  # Windows
 
 # Ignore environment variables and credentials
 .env
 *.env
+
+.vscode/

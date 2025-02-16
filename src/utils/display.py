@@ -1,6 +1,9 @@
-# Import formula for weights (if needed for display formatting, e.g.,
-# weights in titles)
-import formula
+"""
+    This module contains the display functions for the stock monitoring application.
+    It formats and displays stock data in the console.
+"""
+
+from src.utils import formula
 
 def display_stock_data(data):
     """

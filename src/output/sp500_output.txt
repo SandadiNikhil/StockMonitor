@@ -1,0 +1,222 @@
+---------- START OF OUTPUT FOR MMM ----------
+Enter the stock symbol you want to monitor (e.g., AAPL, TSLA): HTTP error occurred: 403 Client Error: Forbidden for url: https://financialmodelingprep.com/api/v3/historical-earnings-calendar/MMM?apikey=beiGwJS2f85S2dTC7rAxR0qZ4aO8S9oB
+Warning: Could not retrieve Earnings Growth Rate data for MMM. This metric will be excluded from scoring.
+Company Name: 3M Company (MMM)
+
+Could not retrieve real-time price data for MMM.
+
+Could not retrieve historical price data for MMM.
+
+Key Ratios (Latest Fiscal Year):
+  P/E Ratio: 17.038766355140186
+  P/B Ratio: 18.259571648690294
+  D/E Ratio: 3.5077041602465333
+  ROE: 1.071648690292758
+
+Fundamental Ratio Scores (out of 10):
+  P/E Ratio Score: 5
+  P/B Ratio Score: 1
+  D/E Ratio Score: 1
+  ROE Score: 10
+
+Weighted Fundamental Scores (using 5-Year Weights from formula.py):
+  Weighted P/E Ratio Score: 0.50
+  Weighted P/B Ratio Score: 0.07
+  Weighted D/E Ratio Score: 0.03
+  Weighted ROE Score: 0.50
+
+Total Fundamental Score (5-Year Weighting, out of 100): 110.00
+
+Could not retrieve Earnings Growth Rate data (PLACEHOLDER - API function not yet implemented).
+---------- END OF OUTPUT FOR MMM ----------
+
+---------- START OF OUTPUT FOR AOS ----------
+Enter the stock symbol you want to monitor (e.g., AAPL, TSLA): HTTP error occurred: 403 Client Error: Forbidden for url: https://financialmodelingprep.com/api/v3/historical-earnings-calendar/AOS?apikey=beiGwJS2f85S2dTC7rAxR0qZ4aO8S9oB
+Warning: Could not retrieve Earnings Growth Rate data for AOS. This metric will be excluded from scoring.
+Company Name: A. O. Smith Corporation (AOS)
+
+Could not retrieve real-time price data for AOS.
+
+Could not retrieve historical price data for AOS.
+
+Key Ratios (Latest Fiscal Year):
+  P/E Ratio: 18.801723463268363
+  P/B Ratio: 0
+  D/E Ratio: 0
+  ROE: 0
+
+Fundamental Ratio Scores (out of 10):
+  P/E Ratio Score: 5
+  P/B Ratio Score: 10
+  D/E Ratio Score: 10
+  ROE Score: 1
+
+Weighted Fundamental Scores (using 5-Year Weights from formula.py):
+  Weighted P/E Ratio Score: 0.50
+  Weighted P/B Ratio Score: 0.75
+  Weighted D/E Ratio Score: 0.25
+  Weighted ROE Score: 0.05
+
+Total Fundamental Score (5-Year Weighting, out of 100): 155.00
+
+Could not retrieve Earnings Growth Rate data (PLACEHOLDER - API function not yet implemented).
+---------- END OF OUTPUT FOR AOS ----------
+
+---------- START OF OUTPUT FOR ABT ----------
+Enter the stock symbol you want to monitor (e.g., AAPL, TSLA): HTTP error occurred: 403 Client Error: Forbidden for url: https://financialmodelingprep.com/api/v3/historical-earnings-calendar/ABT?apikey=beiGwJS2f85S2dTC7rAxR0qZ4aO8S9oB
+Warning: Could not retrieve Earnings Growth Rate data for ABT. This metric will be excluded from scoring.
+Company Name: Abbott Laboratories (ABT)
+
+Could not retrieve real-time price data for ABT.
+
+Could not retrieve historical price data for ABT.
+
+Key Ratios (Latest Fiscal Year):
+  P/E Ratio: 33.351351515823865
+  P/B Ratio: 4.944428793748155
+  D/E Ratio: 0.41118565914566224
+  ROE: 0.14825272647203586
+
+Fundamental Ratio Scores (out of 10):
+  P/E Ratio Score: 1
+  P/B Ratio Score: 1
+  D/E Ratio Score: 10
+  ROE Score: 5
+
+Weighted Fundamental Scores (using 5-Year Weights from formula.py):
+  Weighted P/E Ratio Score: 0.10
+  Weighted P/B Ratio Score: 0.07
+  Weighted D/E Ratio Score: 0.25
+  Weighted ROE Score: 0.25
+
+Total Fundamental Score (5-Year Weighting, out of 100): 67.50
+
+Could not retrieve Earnings Growth Rate data (PLACEHOLDER - API function not yet implemented).
+---------- END OF OUTPUT FOR ABT ----------
+
+---------- START OF OUTPUT FOR ABBV ----------
+Enter the stock symbol you want to monitor (e.g., AAPL, TSLA): HTTP error occurred: 403 Client Error: Forbidden for url: https://financialmodelingprep.com/api/v3/historical-earnings-calendar/ABBV?apikey=beiGwJS2f85S2dTC7rAxR0qZ4aO8S9oB
+Warning: Could not retrieve Earnings Growth Rate data for ABBV. This metric will be excluded from scoring.
+Company Name: AbbVie Inc. (ABBV)
+
+Could not retrieve real-time price data for ABBV.
+
+Could not retrieve historical price data for ABBV.
+
+Key Ratios (Latest Fiscal Year):
+  P/E Ratio: 56.34113921447666
+  P/B Ratio: 26.446617760617762
+  D/E Ratio: 5.732142857142857
+  ROE: 0.4694015444015444
+
+Fundamental Ratio Scores (out of 10):
+  P/E Ratio Score: 1
+  P/B Ratio Score: 1
+  D/E Ratio Score: 1
+  ROE Score: 10
+
+Weighted Fundamental Scores (using 5-Year Weights from formula.py):
+  Weighted P/E Ratio Score: 0.10
+  Weighted P/B Ratio Score: 0.07
+  Weighted D/E Ratio Score: 0.03
+  Weighted ROE Score: 0.50
+
+Total Fundamental Score (5-Year Weighting, out of 100): 70.00
+
+Could not retrieve Earnings Growth Rate data (PLACEHOLDER - API function not yet implemented).
+---------- END OF OUTPUT FOR ABBV ----------
+
+---------- START OF OUTPUT FOR ACN ----------
+Enter the stock symbol you want to monitor (e.g., AAPL, TSLA): HTTP error occurred: 403 Client Error: Forbidden for url: https://financialmodelingprep.com/api/v3/historical-earnings-calendar/ACN?apikey=beiGwJS2f85S2dTC7rAxR0qZ4aO8S9oB
+Warning: Could not retrieve Earnings Growth Rate data for ACN. This metric will be excluded from scoring.
+Company Name: Accenture plc (ACN)
+
+Could not retrieve real-time price data for ACN.
+
+Could not retrieve historical price data for ACN.
+
+Key Ratios (Latest Fiscal Year):
+  P/E Ratio: 29.55271792763504
+  P/B Ratio: 7.5894124100301585
+  D/E Ratio: 0.14566087751248327
+  ROE: 0.25680928666575276
+
+Fundamental Ratio Scores (out of 10):
+  P/E Ratio Score: 1
+  P/B Ratio Score: 1
+  D/E Ratio Score: 10
+  ROE Score: 10
+
+Weighted Fundamental Scores (using 5-Year Weights from formula.py):
+  Weighted P/E Ratio Score: 0.10
+  Weighted P/B Ratio Score: 0.07
+  Weighted D/E Ratio Score: 0.25
+  Weighted ROE Score: 0.50
+
+Total Fundamental Score (5-Year Weighting, out of 100): 92.50
+
+Could not retrieve Earnings Growth Rate data (PLACEHOLDER - API function not yet implemented).
+---------- END OF OUTPUT FOR ACN ----------
+
+---------- START OF OUTPUT FOR ADBE ----------
+Enter the stock symbol you want to monitor (e.g., AAPL, TSLA): HTTP error occurred: 403 Client Error: Forbidden for url: https://financialmodelingprep.com/api/v3/historical-earnings-calendar/ADBE?apikey=beiGwJS2f85S2dTC7rAxR0qZ4aO8S9oB
+Warning: Could not retrieve Earnings Growth Rate data for ADBE. This metric will be excluded from scoring.
+Company Name: Adobe Inc. (ADBE)
+
+Could not retrieve real-time price data for ADBE.
+
+Could not retrieve historical price data for ADBE.
+
+Key Ratios (Latest Fiscal Year):
+  P/E Ratio: 41.47854496402878
+  P/B Ratio: 16.350280751506556
+  D/E Ratio: 0.4293512938674229
+  ROE: 0.3941864587025877
+
+Fundamental Ratio Scores (out of 10):
+  P/E Ratio Score: 1
+  P/B Ratio Score: 1
+  D/E Ratio Score: 10
+  ROE Score: 10
+
+Weighted Fundamental Scores (using 5-Year Weights from formula.py):
+  Weighted P/E Ratio Score: 0.10
+  Weighted P/B Ratio Score: 0.07
+  Weighted D/E Ratio Score: 0.25
+  Weighted ROE Score: 0.50
+
+Total Fundamental Score (5-Year Weighting, out of 100): 92.50
+
+Could not retrieve Earnings Growth Rate data (PLACEHOLDER - API function not yet implemented).
+---------- END OF OUTPUT FOR ADBE ----------
+
+---------- START OF OUTPUT FOR AMD ----------
+Enter the stock symbol you want to monitor (e.g., AAPL, TSLA): HTTP error occurred: 403 Client Error: Forbidden for url: https://financialmodelingprep.com/api/v3/historical-earnings-calendar/AMD?apikey=beiGwJS2f85S2dTC7rAxR0qZ4aO8S9oB
+Warning: Could not retrieve Earnings Growth Rate data for AMD. This metric will be excluded from scoring.
+Company Name: Advanced Micro Devices, Inc. (AMD)
+
+Could not retrieve real-time price data for AMD.
+
+Could not retrieve historical price data for AMD.
+
+Key Ratios (Latest Fiscal Year):
+  P/E Ratio: 123.58793418647164
+  P/B Ratio: 3.5229259310728183
+  D/E Ratio: 0.008529043913285158
+  ROE: 0.028505419677598665
+
+Fundamental Ratio Scores (out of 10):
+  P/E Ratio Score: 1
+  P/B Ratio Score: 1
+  D/E Ratio Score: 10
+  ROE Score: 1
+
+Weighted Fundamental Scores (using 5-Year Weights from formula.py):
+  Weighted P/E Ratio Score: 0.10
+  Weighted P/B Ratio Score: 0.07
+  Weighted D/E Ratio Score: 0.25
+  Weighted ROE Score: 0.05
+
+Total Fundamental Score (5-Year Weighting, out of 100): 47.50
+
+Could not retrieve Earnings Growth Rate data (PLACEHOLDER - API function not yet implemented).
