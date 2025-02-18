@@ -5,7 +5,7 @@ Contains the central fetch_fmp_data function.
 """
 
 import requests
-from src.utils import config 
+from utils import config 
 from requests.exceptions import HTTPError
 
 

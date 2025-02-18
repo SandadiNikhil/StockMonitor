@@ -7,9 +7,9 @@ It handles API authentication using environment variables.
 """
 
 from bs4 import BeautifulSoup
-from src.utils import config 
+from utils import config 
 from requests.exceptions import HTTPError
-from src.api import core_api  
+from api import core_api  
 
 
 def get_company_profile(symbol):
@@ -100,12 +100,12 @@ def main():
     realtime_price = get_realtime_price(symbol_to_check)
     print(f"\nReal-time Price for {symbol_to_check}: {realtime_price}")
 
-    # historical = get_historical_price(symbol_to_check)
-    # if historical:
-    #     print(f"\nHistorical Data for {symbol_to_check}: (first 2 records)")
-    #     print(historical[:2])  
-    # else:
-    #     print(f"\nCould not retrieve historical data for {symbol_to_check}")
+    historical = get_historical_price(symbol_to_check)
+    if historical:
+        print(f"\nHistorical Data for {symbol_to_check}: (first 2 records)")
+        print(historical[:2])  
+    else:
+        print(f"\nCould not retrieve historical data for {symbol_to_check}")
 
     key_ratios = get_company_key_ratios(
         symbol_to_check)  # Test key ratios function

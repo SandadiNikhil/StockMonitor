@@ -3,7 +3,7 @@
     It formats and displays stock data in the console.
 """
 
-from src.utils import formula
+from utils import formula
 
 def display_stock_data(data):
     """
